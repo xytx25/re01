@@ -4,22 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>鲲の家</title>
     <style>
         html {
     min-height: 100%; 
 }
         body {
 background: linear-gradient(to bottom left,rgb(235, 144, 203), rgb(104, 191, 231));
+text-align:center;
+}
+.circleImg{
+  border-radius: 30px;
+  width:500px;
+  height:500px;
+}
+.ccleImg{
+  border-radius: 30px;
+  width:60px;
+  height:60px;
+}
+.flex{
+    display: flex;
+}
+.flex1{
+    flex:1;
+}
+.flex2{
+    flex:2;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+*{
+    border:1px solid black
 }
     </style>
 </head>
-<body style="display:flex;justify-content: center;align-items:center;">
-    <div>
-        <p style="font-family:Arial;font-size:100px;display: inline-block;height: 150px;width:600px;background: linear-gradient(to right,rgb(238, 145, 161),rgb(87, 163, 228));-webkit-background-clip: text;color:transparent;">你好，世界！</p>
-    <p style="text-align: center;">嘶哈嘶哈</p>
-    <img src="https://github.com/xytx25/re01/blob/main/sllh.jpg?raw=true" alt="" width="500" height="500">
+<body class="flex">
+    <div class="flex" style="height: 100px;"></div>
+    <!--头像-->
+<img class="ccleImg" src="https://github.com/xytx25/re01/blob/main/tx.jpg?raw=true
+" alt="">
+    <div class="flex1 flex column">
+        <div style="height:300px ;">
+            <p style="font-family:Arial;font-size:100px;display: inline-block;height: 150px;width:600px;background: linear-gradient(to right,rgb(238, 145, 161),rgb(87, 163, 228));-webkit-background-clip: text;color:transparent;">你好，世界！</p>
+        </div>
+        <!--你好世界-->
+        <div class="flex1 flex column" style="align-items: center;justify-content:center;padding: 10px;">
+        <!--图片-->
+        <p>嘶哈嘶哈</p>
+    <img class="circleImg" src="https://github.com/xytx25/re01/blob/main/sllh.jpg?raw=true
+" alt="">
     </div>
-    
 </body>
 </html>
