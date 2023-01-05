@@ -28,35 +28,136 @@ text-align:center;
 }
 .flex1{
     flex:1;
-}
-.flex2{
-    flex:2;
-}
+    }
 .row{
     flex-direction: row;
 }
 .column{
     flex-direction: column;
 }
+* {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+}
+.shell{
+        position:fixed;
+        width: 160px;
+        height: 650px;
+        background-color: #a1e0ff;
+}
+ .buttons{
+            margin: 60px 0;
+            color: #fff;
+}
+ .li{
+            letter-spacing: 2px;
+            font: 600 17px '';
+            padding: 16px 52px;
+            transition: .3s;
+}
+ .li::after{
+            content: '';
+            position: absolute;
+            left: 20px;
+            margin-top: -22px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+}
+ .buttons>li:hover{
+            background-color: #efc8ff;
+}
+
+.li ul{
+            width: 0;
+            height: 530px;
+            padding: 60px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            background-color: #41c1ec;
+            transition: .3s;
+}
+
+.li ul li{
+            padding: 16px 24px;
+            transition: .3s;
+}
+
+ .li:hover ul{
+            width: 116px;
+}
+.li ul li:hover{
+            background-color: #f2cfff;
+}
     </style>
 </head>
-<body class="flex">
-    <div class="flex" style="height: 100px;"></div>
-    <!--头像-->
-<img class="ccleImg" src="https://github.com/xytx25/re01/blob/main/tx.jpg?raw=true" alt="">
-    <div class="flex1 flex column">
-        <div style="height:300px ;">
-            <p style="font-family:Arial;font-size:100px;display: inline-block;height: 150px;width:600px;background: linear-gradient(to right,rgb(223, 101, 142),rgb(69, 131, 231));-webkit-background-clip: text;color:transparent;">你好，世界！</p>
-        </div>
-        <!--你好世界-->
-        <div class="flex1 flex column" style="align-items: center;justify-content:center;padding: 10px;">
-        <!--图片-->
-       <bottom type="bottom" onclick="alert('涩涩，达咩！')">不可以涩涩（不是按钮）</bottom>
-    <img class="circleImg" src="sllh1.jpg" alt="">
+<body class="flex column">
+    <div class="flex row" style="height:65px;justify-content: space-between;">  <!--你好世界/头像-->
+            <img class="ccleImg" src="tx.jpg" title="谁人の头像" alt="图片无法正常显示">
+            <audio controls style="align-self: flex-end;" autoplay="autoplay" loop="loop" preload="auto" muted=yes>
+            <source src="cadode-回夏.mp3" type="audio/mpeg">
+            <embed height="50" width="100" src="cadode-回夏.mp3">
+            音频无法正常播放
+            </audio>
     </div>
-        <div class="flex1">
+    <div>     
+        <nav class="shell">
+            <ul class="buttons">
+                <li class="li">
+                    一
+                    <ul>
+                        <li>①</li>
+                        <li>②</li>
+                        <li>③</li>
+                        <li>④</li>
+                    </ul>
+                </li>
+    
+                <li class="li">
+                    二
+                    <ul>
+                        <li>①</li>
+                        <li>②</li>
+                        <li>③</li>
+                        <li>④</li>
+                        <li>⑤</li>
+                    </ul>
+                </li>
+    
+                <li class="li">
+                    三
+                    <ul>
+                        <li>①   </li>
+                        <li>②</li>
+                        <li>③</li>
+                    </ul>
+                </li>
+    
+                <li class="li">
+                   四
+                    <ul>
+                        <li>①</li>
+                        <li>②</li>
+                        <li>③</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+            <p style="font-family:Arial;font-size:100px;display: inline-block;height: 550px;width:1200px;background: linear-gradient(to right,rgb(223, 101, 142),rgb(69, 131, 231));-webkit-background-clip: text;color:transparent;align-self:center;">你好，世界！<br>Hello World!<br>こんにちは、世界です!</p>         
+    </div>
+      
+    <div class="flex column" style="align-items: center;justify-content:center;padding: 10px;"><!--图片-->
+          <bottom type="bottom" onclick="alert('涩涩，达咩！')">→不可以涩涩←</bottom>
+          <img class="circleImg" src="sllh1.jpg" title="蒹葭苍苍，白露为霜。所谓伊人，在水一方" alt="图片无法正常显示">
+    </div>
+    <div class="flex1">
         <p>视频测试</p>
-       <video src="https://github.com/xytx25/re01/blob/main/lxq.mp4" width="800" height="600" controls></video>
+       <video src="rain.mp4" width="800" height="500" controls="controls" poster="poster.jpg"></video>
     </div>
 </body>
 </html>
